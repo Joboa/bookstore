@@ -6,11 +6,11 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Set work directory
-WORKDIR /django-bookstore
+WORKDIR /bookstore-app
 
 # Install dependencies
-COPY Pipfile Pipfile.lock /code/
+COPY Pipfile Pipfile.lock /bookstore-app/
 RUN pip install pipenv && pipenv install --system
 
 # Copy project
-COPY . /django-bookstore/
+COPY . /bookstore-app/

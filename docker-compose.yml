@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    command: python /bookstore-app/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/bookstore-app
+    ports:
+      - 8000:8000
+

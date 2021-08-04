@@ -10,7 +10,7 @@ WORKDIR /bookstore-app
 
 # Install dependencies
 COPY Pipfile Pipfile.lock /bookstore-app/
-RUN pip install pipenv && pipenv install --system
+RUN pip install pipenv && pipenv install --system --ignore-pipfile
 
 # Copy project
 COPY . /bookstore-app/

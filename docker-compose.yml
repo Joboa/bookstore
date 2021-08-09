@@ -4,6 +4,9 @@ services:
   web:
     build: .
     command: python /bookstore-app/manage.py runserver 0.0.0.0:8000
+    environment: 
+      - SECRET_KEY=django-insecure-vzbn0w$$gzr$$292otsi$$7f5f+mve35=optm&l62vl^#pi2(1^72
+      - DEBUG=1
     volumes:
       - .:/bookstore-app
     ports:

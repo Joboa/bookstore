@@ -153,7 +153,7 @@ ACCOUNT_LOGOUT_REDIRECT = 'home'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # django-allauth config
-SITE_ID = 1
+SITE_ID = 2
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 
@@ -162,9 +162,12 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True 
 ACCOUNT_UNIQUE_EMAIL = True
 
+DEFAULT_FROM_EMAIL = 'admin@onlinebookstore.gh.com'
+
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
